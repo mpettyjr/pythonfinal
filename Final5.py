@@ -8,20 +8,20 @@ class Rectangle:
         """Function area() will allow the user to calculate the area by inputting the lengths or coordinates of a rectangle."""
         option = input('Lengths or coordinate points? \'l\' for lengths, \'c\' for coordinates')
         if option == 'l':
-            x = int(input('Input length1: '))
-            y = int(input('Input length2: '))
+            x = float(input('Input length1: '))
+            y = float(input('Input length2: '))
             return x * y
         elif option == 'c':
             point1 = input('Input top-left coordinate (x y): ')
             point_1 = point1.split(' ')
             first_points = []
             for i in point_1:
-                first_points.append(int(i))
+                first_points.append(float(i))
             point2 = input('Input bottom-right coordinate (x y): ')
             point_2 = point2.split(' ')
             second_points = []
             for i in point_2:
-                second_points.append(int(i))
+                second_points.append(float(i))
             area = (second_points[0] - first_points[0]) * (first_points[1] - second_points[1])
             return area
 
@@ -29,20 +29,20 @@ class Rectangle:
         """Function perimeter() will allow the user to calculate the perimeter by inputting the lengths or coordinates of a rectangle."""
         option = input('Lengths or coordinate points? \'l\' for lengths, \'c\' for coordinates')
         if option == 'l':
-            x = int(input('Input length1: '))
-            y = int(input('Input length2: '))
+            x = float(input('Input length1: '))
+            y = float(input('Input length2: '))
             return 2 * (x + y)
         elif option == 'c':
             point1 = input('Input top-left coordinate (x y): ')
             point_1 = point1.split(' ')
             first_points = []
             for i in point_1:
-                first_points.append(int(i))
+                first_points.append(float(i))
             point2 = input('Input bottom-right coordinate (x y): ')
             point_2 = point2.split(' ')
             second_points = []
             for i in point_2:
-                second_points.append(int(i))
+                second_points.append(float(i))
             perim = (second_points[0] - first_points[0]) + (first_points[1] - second_points[1])
             return 2 * perim
 
